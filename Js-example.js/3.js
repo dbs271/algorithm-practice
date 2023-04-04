@@ -30,3 +30,24 @@ console.log(a)
 [12,13,14,15] (값있음)
 "결과값이 없습니다." (값없음)
 */
+
+const arr = [1, 2, 3, 4, 5];
+
+function checkArr(arr, num) {
+  // map을 사용해 배열을 순회하며 각 배열에 10을 더함
+  const array = arr.map((el) => el + 10);
+  // indexOf를 사용해 검사하고자 하는 숫자가 배열에 있는지 확인
+  const index = array.indexOf(num);
+  // -1은 배열에 수가 존재하지 않는다는 뜻이므로 console.log를 반환
+  if (index === -1) {
+    console.log("결과값이 없습니다.");
+  }
+  // splice를 사용해 검사하고자 하는 수가 있다면 그 수를 제외하고 반환
+  // splice는 start, deleteCount, item 순으로 작성하기 때문에
+  // (index, 1) => (검사하고자 하는 index 수, 해당 인덱스에서부터 1개를 삭제한다) 라는 뜻
+  array.splice(index, 1);
+  return array;
+}
+
+const a = checkArr(arr, 11);
+console.log(a);

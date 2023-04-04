@@ -13,3 +13,17 @@ const arr = [1,2,3,4,5] const a = solution(arr) console.log(a)
 [2,3]
 [짝수의 개수, 홀수의 개수]
 */
+
+const arr = [1, 2, 3, 4, 5];
+
+function solution(arr) {
+  let count1 = 0;
+  let count2 = 0;
+  for (let i = 0; i < arr.length; i++) {
+    return arr[i] % 2 === 0 ? count1++ : count2++;
+  }
+  retrun[(count1, count2)];
+}
+
+const a = solution(arr);
+console.log(a);
