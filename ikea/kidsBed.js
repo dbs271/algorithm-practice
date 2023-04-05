@@ -7,6 +7,9 @@ const bedName = {
   busunge: "부숭에",
   sniglar: "스니글라르",
   sundvik: "순드비크",
+  mydal: "뮈달",
+  vitval: "비트발",
+  tuffing: "투핑",
 };
 // 침대 사이즈
 const bedSize = { average: "90x200cm", single: "70x160cm", double: "80x200cm" };
@@ -17,6 +20,7 @@ const bedType = {
   doubleSidedBed: "양면침대",
   bedFrame: "침대프레임",
   adjustableBed: "길이조절침대",
+  bunkBedFrame: "2층침대프레임",
 };
 // 침대 색상
 const bedColors = {
@@ -30,7 +34,10 @@ const bedColors = {
   white: "화이트 화이트",
   silver: "실버",
   whitePine: "화이트/소나무",
+  pine: "소나무",
   beech: "너도밤나무",
+  whiteLightGray: "화이트/라이트그레이",
+  darkGray: "다크그레이",
 };
 
 kidBeds = {
@@ -170,7 +177,40 @@ kidBeds = {
     },
   },
   // 벙커침대
-  bunkerBed: {},
+  bunkerBed: {
+    MYDAL_1: {
+      id: 1,
+      name: bedName.mydal,
+      classiFication: bedType.bunkBedFrame,
+      color: bedColors.pine,
+      size: bedSize.average,
+      price: "399,000",
+    },
+    VITVAL_1: {
+      id: 2,
+      name: bedName.vitval,
+      classiFication: bedType.bunkBedFrame,
+      color: bedColors.whiteLightGray,
+      size: bedSize.average,
+      price: "299,000",
+    },
+    TUFFING_1: {
+      id: 3,
+      name: bedName.tuffing,
+      classiFication: bedType.bunkBedFrame,
+      color: darkGray,
+      size: bedSize.average,
+      price: "200,000",
+    },
+    VITVAL_2: {
+      id: 4,
+      name: bedName.vitval,
+      classiFication: bedType.loftBedFrame + "+ 책상상판",
+      color: bedColors.whiteLightGray,
+      size: bedSize.average,
+      price: "309,000",
+    },
+  },
   // 침대 액세서리
   bedAccessory: {},
 };
