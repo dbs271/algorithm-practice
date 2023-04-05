@@ -10,9 +10,16 @@ const bedName = {
   mydal: "뮈달",
   vitval: "비트발",
   tuffing: "투핑",
+  sufflett: "수플레트",
+  lova: "뢰바",
 };
 // 침대 사이즈
-const bedSize = { average: "90x200cm", single: "70x160cm", double: "80x200cm" };
+const bedSize = {
+  average: "90x200cm",
+  single: "70x160cm",
+  double: "80x200cm",
+  tendSize: "70/80/90",
+};
 // 침대 종류
 const bedType = {
   loftBed: "로프트침대",
@@ -21,6 +28,9 @@ const bedType = {
   bedFrame: "침대프레임",
   adjustableBed: "길이조절침대",
   bunkBedFrame: "2층침대프레임",
+  bedTent: "베트텐트",
+  bedCanopy: "침대캐노피",
+  bedCurtain: "침대커튼",
 };
 // 침대 색상
 const bedColors = {
@@ -38,6 +48,10 @@ const bedColors = {
   beech: "너도밤나무",
   whiteLightGray: "화이트/라이트그레이",
   darkGray: "다크그레이",
+  pink: "핑크",
+  green: "그린",
+  marineAnimalPattern: "해양동물패턴",
+  marketStallPattern: "시장 가판대 패턴",
 };
 
 kidBeds = {
@@ -198,7 +212,7 @@ kidBeds = {
       id: 3,
       name: bedName.tuffing,
       classiFication: bedType.bunkBedFrame,
-      color: darkGray,
+      color: bedColors.darkGray,
       size: bedSize.average,
       price: "200,000",
     },
@@ -212,7 +226,37 @@ kidBeds = {
     },
   },
   // 침대 액세서리
-  bedAccessory: {},
+  bedAccessory: {
+    SUFFLETT_1: {
+      id: 1,
+      name: bedName.sufflett,
+      classiFication: bedType.bedTent,
+      color: bedColors.pink,
+      size: bedSize.bedTent,
+      price: "19,000",
+    },
+    KURA_2: {
+      id: 2,
+      name: bedName.kura,
+      classiFication: bedType.bedTent,
+      color: bedColors.marineAnimalPattern,
+      price: "34,900",
+    },
+    LOVA_1: {
+      id: 3,
+      name: bedName.lova,
+      classiFication: bedType.bedCanopy,
+      color: bedColors.green,
+      price: "14,900",
+    },
+    KURA_3: {
+      id: 4,
+      name: bedName.kura,
+      classiFication: bedType.bedCurtain,
+      color: bedColors.marketStallPattern,
+      price: "26,900",
+    },
+  },
 };
 
-console.log(kidBeds.singleBed.SLAKT_1.classiFication);
+console.log(kidBeds.bedAccessory.KURA_3);
