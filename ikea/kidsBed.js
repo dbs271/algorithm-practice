@@ -30,6 +30,7 @@ const bedColors = {
   white: "화이트 화이트",
   silver: "실버",
   whitePine: "화이트/소나무",
+  beech: "너도밤나무",
 };
 
 kidBeds = {
@@ -134,7 +135,40 @@ kidBeds = {
     },
   },
   // 길이조절침대
-  adjustableBed: {},
+  adjustableBed: {
+    BUSUNGE_1: {
+      id: 1,
+      name: bedName.busunge,
+      classiFication: bedType.adjustableBed,
+      color: bedColors.white,
+      size: bedSize.double,
+      price: "299,000",
+    },
+    SNIGLAR_1: {
+      id: 2,
+      name: bedName.sniglar,
+      classiFication: bedType.bedFrame + "+ 갈빗살",
+      color: bedColors.beech,
+      size: bedSize.single,
+      price: "120,000",
+    },
+    SUNDVIK_1: {
+      id: 3,
+      name: bedName.sundvik,
+      classiFication: bedType.adjustableBed + "+ 갈빗살",
+      color: bedColors.white,
+      size: bedSize.double,
+      price: "269,000",
+    },
+    SLAKT_4: {
+      id: 4,
+      name: bedName.slakt,
+      classiFication: bedType.adjustableBed + "+ 갈빗살",
+      color: bedColors.white,
+      size: bedSize.double,
+      price: "209,000",
+    },
+  },
   // 벙커침대
   bunkerBed: {},
   // 침대 액세서리
