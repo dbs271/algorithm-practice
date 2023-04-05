@@ -2,13 +2,21 @@
 const bedName = {
   smostad: "스모스타드",
   svarta: "스베르타",
+  kura: "쿠라",
+  slakt: "슬렉트",
+  busunge: "부숭에",
+  sniglar: "스니글라르",
+  sundvik: "순드비크",
 };
 // 침대 사이즈
-const bedSize = { average: "90x200cm" };
+const bedSize = { average: "90x200cm", single: "70x160cm", double: "80x200cm" };
 // 침대 종류
 const bedType = {
   loftBed: "로프트침대",
   loftBedFrame: "로프트침대프레임",
+  doubleSidedBed: "양면침대",
+  bedFrame: "침대프레임",
+  adjustableBed: "길이조절침대",
 };
 // 침대 색상
 const bedColors = {
@@ -21,6 +29,7 @@ const bedColors = {
   whiteFrame: "화이트 화이트 프레임",
   white: "화이트 화이트",
   silver: "실버",
+  whitePine: "화이트/소나무",
 };
 
 kidBeds = {
@@ -83,18 +92,53 @@ kidBeds = {
     SVARTA_1: {
       id: 4,
       name: bedName.svarta,
-      classsiFication: bedType.loftBedFrame,
+      classiFication: bedType.loftBedFrame,
       color: bedColors.silver,
       size: bedSize.average,
       price: "199,000",
     },
   },
   // 싱글침대
-  singleBed: {},
+  singleBed: {
+    KURA_1: {
+      id: 1,
+      name: bedName.kura,
+      classiFication: bedType.doubleSidedBed,
+      color: bedColors.whitePine,
+      size: bedSize.average,
+      price: "269,000",
+    },
+    SLAKT_1: {
+      id: 2,
+      name: bedName.slakt,
+      classiFication: bedType.bedFrame + " + 수납",
+      color: bedColors.white,
+      size: bedSize.average,
+      price: "399,000",
+    },
+    SLAKT_2: {
+      id: 3,
+      name: bedName.slakt,
+      classiFication: bedType.bedFrame + "+ 수납함 3개",
+      color: bedColors.white,
+      size: bedSize.average,
+      price: "438,700",
+    },
+    SLAKT_3: {
+      id: 4,
+      name: bedName.slakt,
+      classiFication: bedType.bedFrame + "+ 갈빗살",
+      color: bedColors.white,
+      size: bedSize.average,
+      price: "199,000",
+    },
+  },
   // 길이조절침대
   adjustableBed: {},
+  // 벙커침대
   bunkerBed: {},
+  // 침대 액세서리
   bedAccessory: {},
 };
 
-console.log(kidBeds.loftBed.SMASTAD_1.name);
+console.log(kidBeds.singleBed.SLAKT_1.classiFication);
