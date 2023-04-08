@@ -14,15 +14,8 @@
 // }
 
 let b = document.querySelector();
-function solution(name) {
-  parse(name);
-}
-function parse(par) {
-  let d = parseInt(par);
-  return d;
-}
+function solution() {}
+function parse() {}
 function main() {
-  let a = 10;
-  let c = "10";
-  solution(c);
+  solution();
 }
