@@ -7,8 +7,22 @@
 변수 e는 main함수의 최종 반환 값으로 향후 다른 함수에서 재사용된다.
 */
 
-function solution() {}
-function parse() {}
+// function solution() {}
+// function parse() {}
+// function main() {
+//   solution();
+// }
+
+let b = document.querySelector();
+function solution(name) {
+  parse(name);
+}
+function parse(par) {
+  let d = parseInt(par);
+  return d;
+}
 function main() {
-  solution();
+  let a = 10;
+  let c = "10";
+  solution(c);
 }
