@@ -192,6 +192,5 @@ students.forEach((student) => {
 });
 
 // 7. 점수들의 평균값이 가장 높은 학생의 정보만 보여주세요
-for (let i = 0; i < students.length; i++) {}
 
 // 8. 과학을 제외한 점수의 평균이 가장 낮은 학생의 정보만 보여주세요

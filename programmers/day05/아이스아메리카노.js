@@ -28,3 +28,25 @@ function solution(money) {
 }
 
 // 테스트 5번에서 통과가 안된다... 이류를 찾아봐야겠다
+
+/*
+count = 아메리카노 잔 수
+change = 잔돈 
+
+money의 값이 주어졌을 때 while 문을 돌려 
+잔돈이 5500원 보다 많다면 
+count(아메리카노 수)를 1씩 증가하고
+잔돈에서 5500원을 뺀다
+잔돈이 5500원 보다 적을때 까지 반복
+*/
+function solution(money) {
+  let count = 0;
+  let change = money;
+
+  while (change >= 5500) {
+    count++;
+    change -= 5500;
+  }
+
+  return [count, change];
+}
