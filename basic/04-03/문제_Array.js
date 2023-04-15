@@ -55,20 +55,21 @@
 
 {
   let input_data = [10, 20, 30, 40, 50];
-  const output_data = input_data.splice(2, 2);
+  let output_data = input_data.splice(2, 2);
   console.log(output_data); // [30, 40]
 }
 
 {
   let input_data = [10, 20, 30, 40, 50];
-  let output_data = input_data.splice(2, 2);
+  input_data.splice(2, 2);
   console.log(input_data); // [10, 20, 50]
 }
 
-// {
-//   let input_data = [10, 20, 30, 40, 50];
-//   console.log(output_data); // 3 *인덱스 번호
-// }
+{
+  let input_data = [10, 20, 30, 40, 50];
+  let output_data = input_data.indexOf(40);
+  console.log(output_data); // 3 *인덱스 번호
+}
 
 {
   let input_data = "오늘 날씨는 매우 맑음";
