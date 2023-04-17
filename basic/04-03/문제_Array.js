@@ -19,7 +19,7 @@
 
 {
   let input_data = [1, 2, 3, 4, 5];
-  let output_data = input_data[4];
+  let output_data = input_data.pop();
   console.log(output_data); // 5
 }
 
