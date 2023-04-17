@@ -81,10 +81,10 @@
   console.log(output_data); // ["오늘", "날씨는", "매우", "흐림"]
 }
 
-// {
-//   // '=' 금지
-let input_data = "오늘 날씨는 매우 맑음";
-let output_data = input_data.split(" ");
-output_data.splice(0, 1, "내일");
-console.log(output_data); // ["내일", "날씨는", "매우", "맑음]
-// }
+{
+  //   // '=' 금지
+  let input_data = "오늘 날씨는 매우 맑음";
+  let output_data = input_data.split(" ");
+  output_data.splice(0, 1, "내일");
+  console.log(output_data); // ["내일", "날씨는", "매우", "맑음]
+}

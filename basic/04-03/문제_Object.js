@@ -38,7 +38,9 @@ let obj = [
   for (let i = 0; i < obj.length; i++) {
     if (obj[i].name === "단순") {
       for (let key in obj[i]) {
-        console.log(key, obj[i][key]);
+        if (key !== "id") {
+          console.log(key, obj[i][key]);
+        }
       }
     }
   }
