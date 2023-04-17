@@ -48,7 +48,11 @@
   // map 사용
   let input_data = [10, 20, 30, 40, 50];
   let output_data = input_data.map((input) => {
-    return input / 2;
+    if (input <= 30) {
+      return input / 10;
+    } else {
+      return input / 2;
+    }
   });
   console.log(output_data); // [1, 2, 3, 20, 25]
 }
@@ -79,6 +83,8 @@
 
 // {
 //   // '=' 금지
-//   let input_data = "오늘 날씨는 매우 맑음";
-//   console.log(output_data); // ["내일", "날씨는", "매우", "맑음]
+let input_data = "오늘 날씨는 매우 맑음";
+let output_data = input_data.split(" ");
+output_data.splice(0, 1, "내일");
+console.log(output_data); // ["내일", "날씨는", "매우", "맑음]
 // }
