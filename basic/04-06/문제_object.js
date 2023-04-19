@@ -80,24 +80,32 @@ const movies = [
 {
   // 1. 장르가 어드벤쳐인 영화의 제목만 보여주세요.
   const input_data = movies;
-  const ouput_data = input_data;
-  console.log(ouput_data);
+  const ouput_data = input_data
+    .filter((movie) => movie.장르.includes("어드벤처"))
+    .map((movie) => movie.제목);
+  console.log("문제 1번: ", ouput_data);
 }
 {
   // 2. 신카이 마코토 감독이 만든 영화들의 장르를 보여주세요.
   const input_data = movies;
-  const ouput_data = input_data;
-  console.log(ouput_data);
+  const ouput_data = input_data
+    .filter((movie) => movie.감독.includes("신카이 마코토"))
+    .map((movie) => movie.장르);
+  console.log("문제 2번: ", ouput_data);
 }
 {
   // 3. 개봉년도가 3번째인 영화의 정보를 모두 출력해주세요
   const input_data = movies;
-  const ouput_data = input_data;
-  console.log(ouput_data);
+  const ouput_data = input_data.sort((a, b) => a.개봉년도 - b.개봉년도);
+  console.log("문제 3번: ", ouput_data[2]);
 }
 {
   // 4. 스튜디오 지브리에서 만든 영화들의 정보만 출력하는데 제작사를 코믹스 웨이브 필름으로 바꿔서 출력해주세요
   const input_data = movies;
-  const ouput_data = input_data;
-  console.log(ouput_data);
+  const ouput_data = input_data.filter((movie) => {
+    if (movie.제작사 === "스튜디오 지브리") {
+      return (movie.제작사 = "코믹스 웨이브 필름");
+    }
+  });
+  console.log("문제 5번: ", ouput_data);
 }

@@ -135,5 +135,19 @@ const search_list4 = webtoons.filter(
 console.log(search_list4);
 
 // 문제 7. 작가중에 이상하게 이름이 올라가있는 사람을 지워주고 자연스럽게 수정해주세요 해당 작품만 보여주세요
+const change_list2 = webtoons
+  .map((e) => {
+    if (typeof e.contribute.writer === "object") {
+      return {
+        ...e,
+        contribute: {
+          ...e.contribute,
+          writer: "이산시",
+        },
+      };
+    }
+    return e;
+  })
+  .filter((e) => e.contribute.writer === "이산시");
 
-// console.log(change_list);
+console.log("7번 문제: ", change_list2);
