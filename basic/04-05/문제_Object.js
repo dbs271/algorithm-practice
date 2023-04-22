@@ -1,3 +1,5 @@
+const e = require("express");
+
 const webtoons = [
   {
     id: 1,
@@ -151,3 +153,19 @@ const change_list2 = webtoons
   .filter((e) => e.contribute.writer === "이산시");
 
 console.log("7번 문제: ", change_list2);
+
+// 문제 7. 작가중에 이상하게 이름이 올라가있는 사람을 지워주고 자연스럽게 수정해주세요 모든 작품 보여주세요
+const change_list3 = webtoons.map((e) => {
+  if (typeof e.contribute.writer === "object") {
+    return {
+      ...e,
+      contribute: {
+        ...e.contribute,
+        writer: "이산시",
+      },
+    };
+  }
+  return e;
+});
+
+console.log("7번 문제: ", change_list3);
