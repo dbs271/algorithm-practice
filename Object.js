@@ -165,17 +165,15 @@ const namesAndAges = students.map(
 //   return `제 이름은 ${name}이고 나이는 ${ages[index]} 입니다.`;
 // });
 console.log("4: ", namesAndAges);
+
 // 5. 각 학생들의 수학, 영어의 점수를 모두 더해주고 평균을 구해주세요 (수학 + 영어) / 학생 수
 
-const mathAndEn = students.map(
-  (student) => student.scores.math + student.scores.english / students.length
-);
+let temp = 0;
+students
+  .map((student) => student.scores.math + student.scores.english)
+  .forEach((v) => (temp += v));
 
-// const math = students.map((student) => student.scores.math);
-// const english = students.map((student) => student.scores.english);
-// const mathAndEn = math.map(
-//   (mat, index) => mat + english[index] / students.length
-// );
+const mathAndEn = temp / students.length;
 
 console.log("5: ", mathAndEn);
 
@@ -184,10 +182,31 @@ console.log("5: ", mathAndEn);
 // const twoClassMathAvg = students
 //   .filter((student) => student.class === 2)
 //   .map((student) => student.scores.math)
-//   .reduce((acc, cur, arr) => acc + cur / arr.length);
+//   .reduce((acc, cur, arr) => acc + cur / arr.length); // NaN
+
+// const twoClass = students.filter((student) => student.class === 2);
+// const twoClassMath =
+//   twoClass
+//     .map((student) => student.scores.math)
+//     .reduce((acc, cur) => acc + cur, 0) / twoClass.length;
+// console.log("6: ", twoClassMath);
+
+// const twoClassMathAvg =
+//   students
+//     .filter((student) => student.class === 2)
+//     .map((student) => student.scores.math)
+//     .reduce((acc, cur) => acc + cur, 0) /
+//   students.filter((student) => student.class === 2).length;
+
+// console.log("6: ", twoClassMathAvg);
 
 const twoClass = students.filter((student) => student.class === 2);
-const twoClassMath = twoClass.map((student) => student.scores.math);
-const twoClassMathSum = twoClassMath.reduce((acc, cur) => acc + cur);
-const twoClassMathAvg = twoClassMathSum / twoClassMath.length;
-console.log("6: ", twoClassMathAvg);
+// const selectClassTwo = twoClass.length;
+let temp1 = 0;
+
+twoClass.forEach((item) => (temp1 += item.scores.math));
+
+// const averClass = temp1 / selectClassTwo;
+const averClass = temp1 / twoClass.length;
+
+console.log(averClass);
